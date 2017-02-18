@@ -14,7 +14,7 @@ public class SelectWalk : MonoBehaviour {
 	static private int buttonSize = Screen.width / 9;
 	static private int buttonSpacer = buttonSize / 5;
 	private int currentSection = 0;//0 = CC, 1 = CB, 2 = WE, 3 = M, 4 = BF
-	private int currentWalk = 0; //
+	public int currentWalk = 0; //
 	private CreateLocations CreateLocations;
 	private int displayLevel = 0;
 

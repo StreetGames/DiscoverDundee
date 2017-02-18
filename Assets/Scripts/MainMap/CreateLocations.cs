@@ -104,6 +104,10 @@ public class CreateLocations : MonoBehaviour {
 		marker.transform.position = new Vector3(((long_-minLongitude)/(lonConversion*100)-9.60F),-1.0F, ((lat_-minLatitude)/(latConversion*100)-5.04F));
 		marker.transform.localScale = new Vector3 (0.1f, 0.5f, 0.1f);
 		marker.name = id_;
+		BoxCollider bc = marker.AddComponent<BoxCollider>();
+		marker.AddComponent<Rigidbody> ();
+		marker.GetComponent<Rigidbody>().useGravity = false;
+		marker.GetComponent<Rigidbody>().isKinematic = true;
 		marker.tag = "Active";
 	}
 }
